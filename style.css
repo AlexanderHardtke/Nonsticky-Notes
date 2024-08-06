@@ -1,0 +1,300 @@
+@font-face {
+    font-family: Caveat;
+    src: url(./font/Caveat-VariableFont_wght.ttf);
+  }
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Caveat;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.burger {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+#checkbox {
+    position: absolute;
+    opacity: 0;
+    top: 32px;
+    left: 17px;
+    width: 28px;
+    height: 28px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 3px;
+    background: #2c9666;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.burgerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    padding-inline-start: 0;
+    width: 150px;
+    height: 150px;
+    font-size: 24px;
+    padding-left: 20px;
+    left: 0;
+    right: 0;
+    top: 112px;
+    margin-top: 3px;
+    background-image: linear-gradient(to bottom right, #f7e57e, #f2d25c);
+    z-index: 3;
+    transform: translateX(-171px);
+    transition: all 225ms ease-in-out;
+}
+
+.show-burgerMenu {
+    transform: translateX(0);
+}
+
+a {
+    text-decoration: none;
+    color: #2c9666;
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputFields {
+    margin-top: 30px;
+    box-shadow: 0 1px 4px #2c9666;
+    border: 2px solid;
+    border-color: #2c9666;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    width: 50vw;
+    margin-bottom: 50px;
+}
+
+input {
+    font-family: Caveat;
+    font-size: 24px;
+    padding: 12px;
+    border: none;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    border: none;
+    font-family: Caveat;
+    font-size: 22px;
+    height: 60px;
+}
+
+#note {
+    white-space: pre-wrap;
+}
+
+.noteText {
+    cursor: pointer;
+    resize: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: Caveat;
+    height: 148px;
+    width: 235px;
+}
+
+.noteEdit {
+    resize: none;
+    outline: none;
+    border: none;
+    background-color: #c23e278a;
+    font-family: Caveat;
+    font-size: 22px;
+    height: 180px;
+    width: 235px;
+}
+
+.seperatorHead {
+    background-color: #2c9666;
+    box-shadow: 0 0px 1px #2c9666;
+    height: 2px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.bigNote {
+    font-size: 22px;
+    padding: 8px;
+    width: 80vw;
+    margin: 0 10vw 30px 10vw;
+    background-image: linear-gradient(to bottom right, #f7e57e, #f2d25c);
+}
+
+.notes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.note {
+    font-size: 22px;
+    padding: 8px;
+    width: 240px;
+    height: 240px;
+    margin: 0px 0px 30px 30px;
+    background-image: linear-gradient(to bottom right, #f7e57e, #f2d25c);
+}
+
+.edit {
+    position: absolute;
+    padding: 8px;
+    width: 240px;
+    height: 240px;
+    font-family: Caveat;
+    font-size: 22px;
+    top: 290px;
+    left: calc(50vw - (
+                /* width */
+                240px / 2));
+    box-shadow: 8px 8px 5px #f57f40;
+    background-image: linear-gradient(to bottom right, #f57f40, #c23e27);
+    z-index: 9;
+    transform: translateX(-1000%);
+}
+
+.titleEdit {
+    background-color: #c23e278a;
+    text-align: center;
+    height: 44px;
+    width: 235px;
+    font-weight: 600;
+    font-size: 34px;
+    font-family: Caveat;
+    resize: none;
+    outline: none;
+    border: none;
+}
+
+.editShow {
+    transform: translateX(0);
+}
+
+h2 {
+    cursor: pointer;
+    font-size: 34px;;
+    text-align: center;
+    margin: 0;
+    margin-top: -28px;
+}
+
+#greenPin {
+    width: 28px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.titleAndPin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#notePin {
+    width: 28px;
+    position: absolute;
+    margin-left: 115px;
+    margin-top: -28px;
+}
+
+#notePinEdit {
+    width: 28px;
+    cursor: pointer;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: -52px;
+}
+
+p {
+    cursor: pointer;
+    margin-top: 6px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#deleteImg {
+    width: 28px;
+    cursor: pointer;
+    position: relative;
+    left: 216px;
+    top: 210px;
+}
+
+#restoreImg {
+    display: none;
+    width: 34px;
+    cursor: pointer;
+    position: relative;
+    left: -38px;
+    top: 210px;
+}
+
+main {
+    position: relative;
+    min-height: 80vh;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    height: 20vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, #f7e57e, #f2d25c);
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 769px) {
+    .inputFields {
+        width: 75vw;
+    }
+
+    .notes {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .inputFields {
+        width: 85vw;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
